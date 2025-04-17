@@ -59,6 +59,11 @@
 - La funzione process_single_freelancer_card e tutto il file di estrazione sono ora completamente documentati con docstring e commenti chiari su ogni step (estrazione dati, pause, click, controllo duplicati, generazione messaggio, salvataggio, chiusura chat).
 - Qualsiasi sviluppatore può ora capire facilmente il flusso e modificare il comportamento senza rischi.
 
+## [2025-04-18] Logging centralizzato su file run.log
+- Creato il file `logger_utils.py` che inizializza il logging su file e console e pulisce `run.log` a ogni run.
+- Modificato `main.py` per usare `logging.info()` al posto di tutte le chiamate a `print()`, così tutti i messaggi sono sia su console che su file.
+- Ora ogni run parte con un file di log pulito, rendendo più facile il debug e il monitoraggio delle operazioni.
+
 ---
 
 Questo file viene aggiornato a ogni modifica significativa per mantenere una traccia chiara e utile a qualsiasi sviluppatore futuro.
